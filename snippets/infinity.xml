@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- GitHub -->
+  <remote  name="github"
+           fetch="https://github.com/" />
+
+  <!-- Project Infinity X -->
+  <remote  name="infinity"
+           fetch="https://github.com/ProjectInfinity-X"
+           revision="QPR2" />
+
+  <!-- Gitea (Project Infinity X) -->
+  <remote  name="infinity-gitea"
+           fetch="https://gitea.com/projectinfinity"
+           revision="QPR2" />
+
+  <!-- Remote Device -->
+  <project path="device/infinity/sepolicy" name="device_infinity_sepolicy" revision="QPR2" remote="infinity" />
+  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" revision="QPR2" remote="infinity" />
+
+  <!-- Remote Frameworks  -->
+  <project path="frameworks/av" name="frameworks_av" remote="infinity" />
+  <project path="frameworks/base" name="frameworks_base" remote="infinity" />
+  <project path="frameworks/native" name="frameworks_native" remote="infinity" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="infinity" />
+  <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" remote="infinity" />
+
+  <!-- Remote General repos -->
+  <project path="art" name="art" remote="infinity" />
+  <project path="bionic" name="bionic" remote="infinity" />
+  <project path="bootable/recovery" name="bootable_recovery" remote="infinity" />
+  <project path="build/make" name="build" remote="infinity" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" remote="infinity" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <project path="manifest" name="manifest" remote="infinity" />
+
+  <!-- Remote Hardware -->
+  <project path="hardware/infinity/interfaces" name="hardware_infinity_interfaces" remote="infinity" />
+  <project path="hardware/interfaces" name="hardware_interfaces" remote="infinity" />
+  <project path="hardware/qcom-caf/wlan" name="hardware_qcom-caf_wlan" revision="QPR2" remote="infinity" />
+  <project path="hardware/lineage/compat" name="hardware_lineage_compat" revision="QPR2" remote="infinity" />
+  <project path="hardware/xiaomi" name="hardware_xiaomi" revision="QPR2" remote="infinity" />
+  <project path="hardware/qcom-caf/sm8350/display" name="hardware_qcom-caf_sm8350_display" revision="QPR2" remote="infinity" />
+  <project path="hardware/qcom-caf/common" name="hardware_qcom-caf_common" groups="qcom" revision="QPR2" remote="infinity" >
+    <!-- add guard for AOSP hardware/qcom dir -->
+    <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
+    <!-- add guards for CAF repositories -->
+    <linkfile src="os_pickup_sepolicy_vndr.mk" dest="device/qcom/sepolicy_vndr/SEPolicy.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/msm8953/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8953/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8996/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8996/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8998/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm660/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm660/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm845/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm845/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8150/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8150/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8250/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8250/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8350/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8350/Android.mk" />
+    <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm8450/audio/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8450/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8450/Android.mk" />
+    <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm8550/audio/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8550/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8550/Android.mk" />
+    <!-- add guards for Pixel kernel modules -->
+    <linkfile src="os_pickup.bp" dest="kernel/google/gs201/private/google-modules/Android.bp" />
+  </project>
+
+  <!-- Remote Packages -->
+  <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="infinity" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="infinity" />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="infinity" />
+  <project path="packages/apps/InfinitySuite" name="packages_apps_InfinitySuite" remote="infinity" />
+  <project path="packages/apps/Contacts" name="packages_apps_Contacts" remote="infinity" />
+  <project path="packages/apps/DeskClock" name="packages_apps_DeskClock" remote="infinity" />
+  <project path="packages/apps/Messaging" name="packages_apps_Messaging" remote="infinity" />
+  <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="infinity" />
+  <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="infinity" />
+  <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="infinity" />
+  <project path="packages/apps/ExactCalculator" name="packages_apps_ExactCalculator" remote="infinity" />
+  <project path="packages/apps/FaceUnlock" name="packages_apps_FaceUnlock" remote="infinity" />
+
+  <!-- Remote Packages Modules -->
+  <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" remote="infinity" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" revision="QPR2" remote="infinity" />
+  <project path="packages/modules/Permission" name="packages_modules_Permission" remote="infinity" />
+  <project path="packages/modules/Wifi" name="packages_modules_Wifi" remote="infinity" />
+  <project path="packages/overlays/Themes" name="packages_overlays_Themes" revision="QPR2" remote="infinity" />
+  <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="infinity" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="infinity" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="infinity" />
+  
+  <!-- Platform Packages -->
+  <project path="platform_testing" name="platform_testing" revision="QPR2" remote="infinity" />
+  
+  <!-- Prebuilts -->
+  <project path="prebuilts/custom-sdk" name="prebuilts_custom-sdk" revision="QPR2" remote="infinity"  />
+
+  <!-- Remote System -->
+  <project path="system/core" name="system_core" remote="infinity" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="infinity" />
+  <project path="system/update_engine" name="system_update_engine" remote="infinity" />
+
+  <!-- Remote Vendor -->
+  <project path="vendor/infinity" name="vendor_infinity" revision="QPR2" remote="infinity" />
+  <project path="vendor/gms" name="vendor_gapps" remote="infinity-gitea" revision="QPR2" clone-depth="1" />
+  <project path="vendor/support" name="vendor_support" remote="infinity" revision="QPR2"  />
+  <project path="vendor/qcom/opensource/vibrator" name="vendor_qcom_opensource_vibrator" revision="QPR2" remote="infinity" />
+</manifest>
