@@ -23,6 +23,7 @@
   <project path="frameworks/av" name="frameworks_av" remote="infinity" />
   <project path="frameworks/base" name="frameworks_base" remote="infinity" />
   <project path="frameworks/native" name="frameworks_native" remote="infinity" />
+  <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" remote="infinity" />
   <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="infinity" />
   <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" remote="infinity" />
 
