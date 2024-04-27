@@ -105,6 +105,7 @@
   <project path="packages/modules/Wifi" name="packages_modules_Wifi" remote="infinity" />
   <project path="packages/overlays/Themes" name="packages_overlays_Themes" revision="QPR2" remote="infinity" />
   <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="infinity" />
+  <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" remote="infinity" />
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="infinity" />
   <project path="packages/services/Telephony" name="packages_services_Telephony" remote="infinity" />
   <project path="packages/services/OmniJaws" name="packages_services_OmniJaws" remote="infinity" />
@@ -124,5 +125,6 @@
   <project path="vendor/infinity" name="vendor_infinity" revision="QPR2" remote="infinity" />
   <project path="vendor/gms" name="vendor_gapps" remote="infinity-gitea" revision="QPR2" clone-depth="1" />
   <project path="vendor/support" name="vendor_support" remote="infinity" revision="QPR2"  />
+  <project path="vendor/extras" name="vendor_extras" remote="infinity" revision="master" />
   <project path="vendor/qcom/opensource/vibrator" name="vendor_qcom_opensource_vibrator" revision="QPR2" remote="infinity" />
 </manifest>
