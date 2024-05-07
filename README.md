@@ -9,7 +9,7 @@ Before you begin, ensure your system meets the following requirements:
 ## Initialization and Syncing:
 1. Initialize your local repository:
     ```bash
-    repo init --depth=1 -u https://github.com/ProjectInfinity-X/manifest -b QPR2 --git-lfs
+    repo init -u https://github.com/ProjectInfinity-X/manifest -b QPR2 --git-lfs
     ```
 2. Sync up with the remote repository:
     ```bash
