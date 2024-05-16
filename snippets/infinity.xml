@@ -121,6 +121,7 @@
   <project path="system/core" name="system_core" remote="infinity" />
   <project path="system/sepolicy" name="system_sepolicy" remote="infinity" />
   <project path="system/update_engine" name="system_update_engine" remote="infinity" />
+  <project path="system/libhidl" name="system_libhidl" remote="infinity" />
 
   <!-- Remote Vendor -->
   <project path="vendor/infinity" name="vendor_infinity" revision="QPR2" remote="infinity" />
