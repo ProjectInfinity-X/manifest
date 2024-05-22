@@ -19,6 +19,9 @@
   <project path="device/infinity/sepolicy" name="device_infinity_sepolicy" revision="QPR2" remote="infinity" />
   <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" revision="QPR2" remote="infinity" />
 
+  <!-- Remote External -->
+  <project path="external/FadingEdgeLayout" name="external_FadingEdgeLayout" remote="infinity" />
+
   <!-- Remote Frameworks  -->
   <project path="frameworks/av" name="frameworks_av" remote="infinity" />
   <project path="frameworks/base" name="frameworks_base" remote="infinity" />
