@@ -97,6 +97,7 @@
   <project path="packages/apps/Messaging" name="packages_apps_Messaging" remote="infinity" />
   <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="infinity" />
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="infinity" />
+  <project path="packages/apps/OmniStyle" name="packages_apps_OmniStyle" remote="infinity" />
   <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="infinity" />
   <project path="packages/apps/ExactCalculator" name="packages_apps_ExactCalculator" remote="infinity" />
   <project path="packages/apps/FaceUnlock" name="packages_apps_FaceUnlock" remote="infinity" />
