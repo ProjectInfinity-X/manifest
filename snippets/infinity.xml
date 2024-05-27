@@ -129,6 +129,7 @@
 
   <!-- Remote Vendor -->
   <project path="vendor/infinity" name="vendor_infinity" revision="QPR2" remote="infinity" />
+  <project path="vendor/infinity-priv/keys" name="vendor_infinity-priv_keys" remote="infinity" />
   <project path="vendor/gms" name="vendor_gapps" remote="infinity-gitea" revision="QPR2" clone-depth="1" />
   <project path="vendor/support" name="vendor_support" remote="infinity" revision="QPR2"  />
   <project path="vendor/extras" name="vendor_extras" remote="infinity" revision="master" />
