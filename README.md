@@ -1,4 +1,4 @@
-# Ｉｎｆｉｎｉｔｙ Ｘ
+![Project Infinity X](https://raw.githubusercontent.com/ProjectInfinity-X/.github/main/profile/Infinity.png)
 
 ## Requirements:
 Before you begin, ensure your system meets the following requirements:
@@ -9,15 +9,43 @@ Before you begin, ensure your system meets the following requirements:
 ## Initialization and Syncing:
 1. Initialize your local repository:
     ```bash
-    repo init -u https://github.com/ProjectInfinity-X/manifest -b QPR2 --git-lfs
+    repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b QPR2 -g default,-mips,-darwin,-notdefault
+    ```
+   Or If you wish to save some system space and don't care about repo history depths:
+    ```bash
+    repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b QPR2 -g default,-mips,-darwin,-notdefault
     ```
 2. Sync up with the remote repository:
     ```bash
-    repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune
+    repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all)
     ```
 
 # Compilation of Project Infinity X:
 
+Build Flags
+---------------
+```bash
+# Whether you are compiling being an OFFICIAL Maintainer:
+INFINITY_BUILD_TYPE := OFFICIAL (Default: UNOFFICIAL)
+
+# Maintainer Name
+INFINITY_MAINTAINER := "YourInput" (Default: Unknown)
+
+# Whether the package supports BLURS
+TARGET_SUPPORTS_BLUR := true/false (Default: false)
+
+# Whether the compiled package ships Google Apps:
+WITH_GAPPS := true/false (Default: false)
+
+# Whether the compiled shipped gapps package uses Google Dialer, Messaging, Contacts:
+TARGET_BUILD_GOOGLE_TELEPHONY := true/false (Default: false)
+
+# Whether the compiled package ships ViMusic
+TARGET_BUILD_VIMUSIC := true/false (Default: false)
+
+# Whether the compiled package ships Moto Calculator irrespective VANILLA or GAPPS:
+USE_MOTO_CALCULATOR := true/false (Default: false)
+```
 ## Setup Environment:
 1. Navigate to the root directory of Project Infinity X:
     ```bash
@@ -27,18 +55,17 @@ Before you begin, ensure your system meets the following requirements:
     ```bash
     . build/envsetup.sh
     ```
-
-## Build Configuration:
+# Build Configuration:
 1. Choose your device configuration:
     ```bash
-    lunch infinity_$device-userdebug
+    lunch infinity_$device-$buildtype
     ```
-    Replace `$device` with your device codename.
+    Replace `$device` with your device codename and `$buildtype` with your prefered build type (user, userdebug or eng).
 
 ## Compilation:
 1. Start the compilation process:
     ```bash
-    make bacon
+    mka bacon
     ```
 
 # Credits:
@@ -53,8 +80,9 @@ Before you begin, ensure your system meets the following requirements:
 - [Xdroid](https://github.com/xdroid-oss)
 - [OctaviOS](https://github.com/Octavi-OS)
 - [Evolution-X](https://github.com/Evolution-X)
+- And Many More If Missed to Mention!
 
-# Additional Notes:
-- **Troubleshooting**: If you encounter any issues during setup or compilation, refer to the troubleshooting section in the project's documentation or seek help from the community forums.
-- **Contributions**: We welcome contributions to Project Infinity X. Refer to our contribution guidelines for more information on how to get involved.
+# Reach US:
+- **Telegram Discussion**: [https://t.me/InfinityXGroup](https://t.me/InfinityXGroup)
+- **Telegram News/Updates**: [https://t.me/ProjectInfinityX](https://t.me/ProjectInfinityX)
 
