@@ -34,6 +34,7 @@
   <project path="hardware/mediatek" name="android_hardware_mediatek" remote="lineage" revision="lineage-21" />
   <project path="hardware/qcom/wlan" name="android_hardware_qcom_wlan" remote="lineage" />
   <project path="hardware/ril" name="android_hardware_ril" remote="lineage" />
+  <project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="lineage" revision="lineage-21" />
   <project path="kernel/configs" name="android_kernel_configs" remote="lineage" />
   <project path="system/bpf" name="android_system_bpf" remote="lineage" />
   <project path="system/security" name="android_system_security" remote="lineage" />

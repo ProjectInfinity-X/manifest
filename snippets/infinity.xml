@@ -54,7 +54,6 @@
   <project path="hardware/interfaces" name="hardware_interfaces" remote="infinity" />
   <project path="hardware/qcom-caf/wlan" name="hardware_qcom-caf_wlan" revision="QPR2" remote="infinity" />
   <project path="hardware/lineage/compat" name="hardware_lineage_compat" revision="QPR2" remote="infinity" />
-  <project path="hardware/xiaomi" name="hardware_xiaomi" revision="QPR2" remote="infinity" />
   <project path="hardware/qcom-caf/sm8350/display" name="hardware_qcom-caf_sm8350_display" revision="QPR2" remote="infinity" />
   <project path="hardware/qcom-caf/common" name="hardware_qcom-caf_common" groups="qcom" revision="QPR2" remote="infinity" >
     <!-- add guard for AOSP hardware/qcom dir -->
