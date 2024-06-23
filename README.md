@@ -9,11 +9,11 @@ Before you begin, ensure your system meets the following requirements:
 ## Initialization and Syncing:
 1. Initialize your local repository:
     ```bash
-    repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b QPR2 -g default,-mips,-darwin,-notdefault
+    repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b QPR3 -g default,-mips,-darwin,-notdefault
     ```
    Or If you wish to save some system space and don't care about repo history depths:
     ```bash
-    repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b QPR2 -g default,-mips,-darwin,-notdefault
+    repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b QPR3 -g default,-mips,-darwin,-notdefault
     ```
 2. Sync up with the remote repository:
     ```bash

@@ -8,7 +8,7 @@
   <!-- Project Infinity X -->
   <remote  name="infinity"
            fetch="https://github.com/ProjectInfinity-X"
-           revision="QPR2" />
+           revision="QPR3" />
 
   <!-- Gitea (Project Infinity X) -->
   <remote  name="infinity-gitea"
@@ -16,8 +16,8 @@
            revision="QPR2" />
 
   <!-- Remote Device -->
-  <project path="device/infinity/sepolicy" name="device_infinity_sepolicy" revision="QPR2" remote="infinity" />
-  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" revision="QPR2" remote="infinity" />
+  <project path="device/infinity/sepolicy" name="device_infinity_sepolicy" revision="QPR3" remote="infinity" />
+  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" revision="QPR3" remote="infinity" />
 
   <!-- Remote External -->
   <project path="external/FadingEdgeLayout" name="external_FadingEdgeLayout" remote="infinity" />
@@ -52,10 +52,10 @@
   <!-- Remote Hardware -->
   <project path="hardware/infinity/interfaces" name="hardware_infinity_interfaces" remote="infinity" />
   <project path="hardware/interfaces" name="hardware_interfaces" remote="infinity" />
-  <project path="hardware/qcom-caf/wlan" name="hardware_qcom-caf_wlan" revision="QPR2" remote="infinity" />
-  <project path="hardware/lineage/compat" name="hardware_lineage_compat" revision="QPR2" remote="infinity" />
-  <project path="hardware/qcom-caf/sm8350/display" name="hardware_qcom-caf_sm8350_display" revision="QPR2" remote="infinity" />
-  <project path="hardware/qcom-caf/common" name="hardware_qcom-caf_common" groups="qcom" revision="QPR2" remote="infinity" >
+  <project path="hardware/qcom-caf/wlan" name="hardware_qcom-caf_wlan" revision="QPR3" remote="infinity" />
+  <project path="hardware/lineage/compat" name="hardware_lineage_compat" revision="QPR3" remote="infinity" />
+  <project path="hardware/qcom-caf/sm8350/display" name="hardware_qcom-caf_sm8350_display" revision="QPR3" remote="infinity" />
+  <project path="hardware/qcom-caf/common" name="hardware_qcom-caf_common" groups="qcom" revision="QPR3" remote="infinity" >
     <!-- add guard for AOSP hardware/qcom dir -->
     <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
     <!-- add guards for CAF repositories -->
@@ -104,10 +104,10 @@
 
   <!-- Remote Packages Modules -->
   <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" remote="infinity" />
-  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" revision="QPR2" remote="infinity" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" revision="QPR3" remote="infinity" />
   <project path="packages/modules/Permission" name="packages_modules_Permission" remote="infinity" />
   <project path="packages/modules/Wifi" name="packages_modules_Wifi" remote="infinity" />
-  <project path="packages/overlays/Themes" name="packages_overlays_Themes" revision="QPR2" remote="infinity" />
+  <project path="packages/overlays/Themes" name="packages_overlays_Themes" revision="QPR3" remote="infinity" />
   <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="infinity" />
   <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" remote="infinity" />
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="infinity" />
@@ -115,10 +115,10 @@
   <project path="packages/services/OmniJaws" name="packages_services_OmniJaws" remote="infinity" />
   
   <!-- Platform Packages -->
-  <project path="platform_testing" name="platform_testing" revision="QPR2" remote="infinity" />
+  <project path="platform_testing" name="platform_testing" revision="QPR3" remote="infinity" />
   
   <!-- Prebuilts -->
-  <project path="prebuilts/custom-sdk" name="prebuilts_custom-sdk" revision="QPR2" remote="infinity"  />
+  <project path="prebuilts/custom-sdk" name="prebuilts_custom-sdk" revision="QPR3" remote="infinity"  />
 
   <!-- Remote System -->
   <project path="system/core" name="system_core" remote="infinity" />
@@ -127,10 +127,10 @@
   <project path="system/libhidl" name="system_libhidl" remote="infinity" />
 
   <!-- Remote Vendor -->
-  <project path="vendor/infinity" name="vendor_infinity" revision="QPR2" remote="infinity" />
+  <project path="vendor/infinity" name="vendor_infinity" revision="QPR3" remote="infinity" />
   <project path="vendor/infinity-priv/keys" name="vendor_infinity-priv_keys" remote="infinity" />
   <project path="vendor/gms" name="vendor_gapps" remote="infinity-gitea" revision="QPR2" clone-depth="1" />
-  <project path="vendor/support" name="vendor_support" remote="infinity" revision="QPR2"  />
+  <project path="vendor/support" name="vendor_support" remote="infinity" revision="QPR3"  />
   <project path="vendor/extras" name="vendor_extras" remote="infinity" revision="master" />
-  <project path="vendor/qcom/opensource/vibrator" name="vendor_qcom_opensource_vibrator" revision="QPR2" remote="infinity" />
+  <project path="vendor/qcom/opensource/vibrator" name="vendor_qcom_opensource_vibrator" revision="QPR3" remote="infinity" />
 </manifest>
