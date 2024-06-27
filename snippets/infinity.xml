@@ -21,6 +21,7 @@
 
   <!-- Remote External -->
   <project path="external/FadingEdgeLayout" name="external_FadingEdgeLayout" remote="infinity" />
+  <project path="external/AndroidSystemBlur" name="external_AndroidSystemBlur" remote="infinity" />
 
   <!-- Remote Frameworks  -->
   <project path="frameworks/av" name="frameworks_av" remote="infinity" />
