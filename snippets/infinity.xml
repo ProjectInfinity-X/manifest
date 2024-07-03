@@ -121,6 +121,7 @@
   
   <!-- Prebuilts -->
   <project path="prebuilts/custom-sdk" name="prebuilts_custom-sdk" revision="QPR3" remote="infinity"  />
+  <project path="prebuilts/sdk" name="prebuilts_sdk" revision="QPR3" remote="infinity" clone-depth="1" />
 
   <!-- Remote System -->
   <project path="system/core" name="system_core" remote="infinity" />

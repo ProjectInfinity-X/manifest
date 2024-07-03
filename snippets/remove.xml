@@ -143,6 +143,9 @@
   <remove-project name="platform/packages/providers/DownloadProvider" />
   <remove-project name="platform/packages/services/Telecomm" />
   <remove-project name="platform/packages/services/Telephony" />
+  
+  <!-- Prebuilts repos -->
+  <remove-project name="platform/prebuilts/sdk" />
 
     <!-- System repos -->
   <remove-project name="platform/system/core" />
