@@ -135,5 +135,6 @@
   <project path="vendor/gms" name="vendor_gapps" remote="infinity-gitea" revision="QPR2" clone-depth="1" />
   <project path="vendor/support" name="vendor_support" remote="infinity" revision="QPR3"  />
   <project path="vendor/extras" name="vendor_extras" remote="infinity" revision="master" />
+  <project path="vendor/bcr" name="vendor_bcr" remote="infinity" revision="QPR3" />
   <project path="vendor/qcom/opensource/vibrator" name="vendor_qcom_opensource_vibrator" revision="QPR3" remote="infinity" />
 </manifest>
