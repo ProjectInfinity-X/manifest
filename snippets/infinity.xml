@@ -129,6 +129,9 @@
   <project path="system/update_engine" name="system_update_engine" remote="infinity" />
   <project path="system/libhidl" name="system_libhidl" remote="infinity" />
 
+  <!-- Remote External -->
+  <project path="external/jemalloc_new" name="external_jemalloc-new" remote="infinity" />
+
   <!-- Remote Vendor -->
   <project path="vendor/infinity" name="vendor_infinity" revision="QPR3" remote="infinity" />
   <project path="vendor/infinity-priv/keys" name="vendor_infinity-priv_keys" remote="infinity" />
