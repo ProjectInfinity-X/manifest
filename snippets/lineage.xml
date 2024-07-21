@@ -33,6 +33,8 @@
   <project path="hardware/libhardware" name="android_hardware_libhardware" remote="lineage" />
   <project path="hardware/mediatek" name="android_hardware_mediatek" remote="lineage" revision="lineage-21" />
   <project path="hardware/qcom/wlan" name="android_hardware_qcom_wlan" remote="lineage" />
+  <project path="hardware/lineage/compat" name="android_hardware_lineage_compat" remote="lineage" />
+  <project path="hardware/lineage/livedisplay" name="android_hardware_lineage_livedisplay" remote="lineage" />
   <project path="hardware/ril" name="android_hardware_ril" remote="lineage" />
   <project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="lineage" revision="lineage-21" />
   <project path="kernel/configs" name="android_kernel_configs" remote="lineage" />

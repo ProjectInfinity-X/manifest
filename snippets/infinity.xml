@@ -54,7 +54,6 @@
   <project path="hardware/infinity/interfaces" name="hardware_infinity_interfaces" remote="infinity" />
   <project path="hardware/interfaces" name="hardware_interfaces" remote="infinity" />
   <project path="hardware/qcom-caf/wlan" name="hardware_qcom-caf_wlan" revision="QPR3" remote="infinity" />
-  <project path="hardware/lineage/compat" name="hardware_lineage_compat" revision="QPR3" remote="infinity" />
   <project path="hardware/qcom-caf/sm8350/display" name="hardware_qcom-caf_sm8350_display" revision="QPR3" remote="infinity" />
   <project path="hardware/qcom-caf/common" name="hardware_qcom-caf_common" groups="qcom" revision="QPR3" remote="infinity" >
     <!-- add guard for AOSP hardware/qcom dir -->
@@ -139,5 +138,5 @@
   <project path="vendor/support" name="vendor_support" remote="infinity" revision="QPR3"  />
   <project path="vendor/extras" name="vendor_extras" remote="infinity" revision="master" />
   <project path="vendor/bcr" name="vendor_bcr" remote="infinity" revision="QPR3" />
-  <project path="vendor/qcom/opensource/vibrator" name="vendor_qcom_opensource_vibrator" revision="QPR3" remote="infinity" />
+  <project path="vendor/qcom/opensource/vibrator" name="vendor_qcom_opensource_vibrator" revision="QPR2" remote="infinity" />
 </manifest>
