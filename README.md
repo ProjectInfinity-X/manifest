@@ -34,11 +34,17 @@ INFINITY_MAINTAINER := "YourInput" (Default: Unknown)
 # Whether the package supports BLURS
 TARGET_SUPPORTS_BLUR := true/false (Default: false)
 
+# Whether the device supports UDFPS (FOD)
+TARGET_HAS_UDFPS := true/false (Default: false)
+
 # Whether the compiled package ships Google Apps:
 WITH_GAPPS := true/false (Default: false)
 
 # Whether the compiled shipped gapps package uses Google Dialer, Messaging, Contacts:
 TARGET_BUILD_GOOGLE_TELEPHONY := true/false (Default: false)
+
+# Whether your device supports screen off touchgestures:
+TARGET_SUPPORTS_TOUCHGESTURES := true/false (Default: false)
 
 # Whether the compiled package ships ViMusic
 TARGET_BUILD_VIMUSIC := true/false (Default: false)
@@ -49,7 +55,7 @@ USE_MOTO_CALCULATOR := true/false (Default: false)
 ## Setup Environment:
 1. Navigate to the root directory of Project Infinity X:
     ```bash
-    cd path/to/project/infinity-x
+    cd path/to/source
     ```
 2. Run the environment setup script:
     ```bash
