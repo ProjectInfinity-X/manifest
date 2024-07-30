@@ -96,6 +96,7 @@
   <project path="packages/apps/Messaging" name="packages_apps_Messaging" remote="infinity" />
   <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="infinity" />
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="infinity" />
+  <project path="packages/apps/TouchGestures" name="packages_apps_TouchGestures" remote="infinity" />
   <project path="packages/apps/OmniStyle" name="packages_apps_OmniStyle" remote="infinity" />
   <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="infinity" />
   <project path="packages/apps/ExactCalculator" name="packages_apps_ExactCalculator" remote="infinity" />
@@ -138,5 +139,6 @@
   <project path="vendor/support" name="vendor_support" remote="infinity" revision="QPR3"  />
   <project path="vendor/extras" name="vendor_extras" remote="infinity" revision="master" />
   <project path="vendor/bcr" name="vendor_bcr" remote="infinity" revision="QPR3" />
+  <project path="vendor/certification" name="vendor_certification" remote="infinity" revision="QPR3" />
   <project path="vendor/qcom/opensource/vibrator" name="vendor_qcom_opensource_vibrator" revision="QPR2" remote="infinity" />
 </manifest>
