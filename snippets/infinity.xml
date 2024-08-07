@@ -109,6 +109,7 @@
   <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" revision="QPR3" remote="infinity" />
   <project path="packages/modules/Permission" name="packages_modules_Permission" remote="infinity" />
   <project path="packages/modules/Wifi" name="packages_modules_Wifi" remote="infinity" />
+  <project path="packages/modules/StatsD" name="packages_modules_StatsD" remote="infinity" />
   <project path="packages/overlays/Themes" name="packages_overlays_Themes" revision="QPR3" remote="infinity" />
   <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="infinity" />
   <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" remote="infinity" />
