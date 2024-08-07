@@ -43,7 +43,7 @@ WITH_GAPPS := true/false (Default: false)
 # Whether the compiled shipped gapps package uses Google Dialer, Messaging, Contacts:
 TARGET_BUILD_GOOGLE_TELEPHONY := true/false (Default: false)
 
-# Whether your device supports screen off touchgestures:
+# Whether the device supports screen off touchgestures:
 TARGET_SUPPORTS_TOUCHGESTURES := true/false (Default: false)
 
 # Whether the compiled package ships ViMusic

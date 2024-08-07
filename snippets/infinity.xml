@@ -128,6 +128,7 @@
   <project path="system/sepolicy" name="system_sepolicy" remote="infinity" />
   <project path="system/update_engine" name="system_update_engine" remote="infinity" />
   <project path="system/libhidl" name="system_libhidl" remote="infinity" />
+  <project path="system/libhwbinder" name="system_libhwbinder" remote="infinity" />
 
   <!-- Remote External -->
   <project path="external/jemalloc_new" name="external_jemalloc-new" remote="infinity" />
