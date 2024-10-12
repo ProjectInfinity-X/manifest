@@ -44,10 +44,12 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
+  <project path="build/release" name="build_release" groups="pdk,tradefed" remote="infinity" />
   <project path="build/soong" name="build_soong" remote="infinity" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
+  <project path="libcore" name="libcore" groups="pdk" remote="infinity" />
   <project path="manifest" name="manifest" remote="infinity" />
 
   <!-- Remote Hardware -->
@@ -110,6 +112,7 @@
   <project path="packages/modules/Permission" name="packages_modules_Permission" remote="infinity" />
   <project path="packages/modules/Wifi" name="packages_modules_Wifi" remote="infinity" />
   <project path="packages/modules/StatsD" name="packages_modules_StatsD" remote="infinity" />
+  <project path="packages/modules/IntentResolver" name="packages_modules_IntentResolver" groups="pdk,sysui-studio" remote="infinity" />
   <project path="packages/overlays/Themes" name="packages_overlays_Themes" revision="QPR3" remote="infinity" />
   <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="infinity" />
   <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" remote="infinity" />

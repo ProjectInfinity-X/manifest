@@ -26,12 +26,12 @@ Build Flags
 ---------------
 ```bash
 # Whether you are compiling being an OFFICIAL Maintainer:
-INFINITY_BUILD_TYPE := OFFICIAL (Default: UNOFFICIAL)
+INFINITY_BUILD_TYPE := OFFICIAL/UNOFFICIAL (Default: UNOFFICIAL)
 
 # Maintainer Name
 INFINITY_MAINTAINER := "YourInput" (Default: Unknown)
 
-# Whether the package supports BLURS
+# Whether the package includes System BLURS
 TARGET_SUPPORTS_BLUR := true/false (Default: false)
 
 # Whether the device supports UDFPS (FOD)
@@ -78,15 +78,15 @@ USE_MOTO_CALCULATOR := true/false (Default: false)
 - [LineageOS](https://github.com/LineageOS)
 - [ProtonAOSP](https://github.com/ProtonAOSP)
 - [PixelExperience](https://github.com/PixelExperience)
-- [CrDroid](https://github.com/crdroidandroid)
+- [crDroid](https://github.com/crdroidandroid)
 - [RisingOS](https://github.com/RisingTechOSS)
-- [Yaap](https://github.com/yaap)
+- [YAAP](https://github.com/yaap)
 - [SuperiorOS](https://github.com/SuperiorOS)
 - [Project Blaze](https://github.com/ProjectBlaze)
-- [Xdroid](https://github.com/xdroid-oss)
+- [xdroidOSS](https://github.com/xdroid-oss)
 - [OctaviOS](https://github.com/Octavi-OS)
 - [Evolution-X](https://github.com/Evolution-X)
-- And Many More If Missed to Mention!
+- And More If May Missed to Mention!
 
 # Reach US:
 - **Telegram Discussion**: [https://t.me/InfinityXGroup](https://t.me/InfinityXGroup)

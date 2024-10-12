@@ -108,14 +108,15 @@
   <!-- General repos -->
   <remove-project name="platform/art" />
   <remove-project name="platform/bionic" />
+  <remove-project name="platform/libcore" />
   <remove-project name="platform/bootable/recovery" />
   <remove-project name="platform/build" />
+  <remove-project name="platform/build/release" />
   <remove-project name="platform/build/soong" />
   <remove-project name="kernel/configs" />
   <remove-project name="platform/platform_testing" />
 
   <!-- Hardware repos -->
-  <!-- Hardware -->
   <remove-project name="platform/hardware/google/gchips" />
   <remove-project name="platform/hardware/google/graphics/common" />
   <remove-project name="platform/hardware/google/pixel" />
@@ -141,6 +142,7 @@
   <remove-project name="platform/packages/modules/Permission" />
   <remove-project name="platform/packages/modules/Wifi" />
   <remove-project name="platform/packages/modules/StatsD" />
+  <remove-project name="platform/packages/modules/IntentResolver" />
   <remove-project name="platform/packages/inputmethods/LatinIME" />
   <remove-project name="platform/packages/providers/DownloadProvider" />
   <remove-project name="platform/packages/services/Telecomm" />
