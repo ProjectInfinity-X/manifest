@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- GitHub -->
+  <remote name="github"
+          fetch="https://github.com/" />
+
+  <!-- Gitlab -->
+  <remote name="gitlab"
+          fetch="https://gitlab.com/" />
+
+  <!-- LFS -->
+  <remote name="lfs"
+          fetch="https://codeberg.org/LFS-dump"
+          revision="16" />
+
+  <!-- Project Infinity X -->
+  <remote name="infinity"
+          fetch="https://github.com/ProjectInfinity-X"
+          revision="16" />
+
+  <!-- Manifest -->
+  <project path="manifest" name="manifest" remote="infinity" />
+
+  <!-- AOSP Modules -->
+  <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk" remote="infinity" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="infinity" />
+  <project path="packages/modules/Permission" name="packages_modules_Permission" groups="pdk-cw-fs,pdk-fs" remote="infinity" />
+  <project path="packages/modules/Wifi" name="packages_modules_Wifi" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="infinity" />
+
+  <!-- AOSP Packages -->
+  <project path="packages/apps/BtHelper" name="packages_apps_BtHelper" remote="infinity" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="lfs" />
+
+  <!-- AOSP Services -->
+  <project path="packages/services/DeviceAsWebcam" name="packages_services_DeviceAsWebcam" groups="pdk-cw-fs,pdk-fs" remote="infinity" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="infinity" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="infinity" />
+
+  <!-- Bootable -->
+  <project path="bootable/deprecated-ota" name="bootable_deprecated-ota" groups="pdk-cw" remote="infinity" />
+  <project path="bootable/recovery" name="bootable_recovery" groups="pdk-cw" remote="infinity" />
+
+  <!-- Build -->
+  <project path="build/bazel" name="build_bazel" groups="pdk" remote="infinity" >
+    <linkfile src="bazel.WORKSPACE" dest="WORKSPACE" />
+    <linkfile src="bazel.BUILD" dest="BUILD" />
+  </project>
+  <project path="build/make" name="build" groups="pdk,sysui-studio" remote="infinity" >
+    <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk" />
+    <linkfile dest="build/buildspec.mk.default" src="buildspec.mk.default" />
+    <linkfile dest="build/core" src="core" />
+    <linkfile dest="build/envsetup.sh" src="envsetup.sh" />
+    <linkfile dest="build/target" src="target" />
+    <linkfile dest="build/tools" src="tools" />
+  </project>
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed,sysui-studio" remote="infinity" >
+    <linkfile dest="Android.bp" src="root.bp" />
+    <linkfile dest="bootstrap.bash" src="bootstrap.bash" />
+  </project>
+
+  <!-- CodeLinaro additions -->
+  <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" groups="qcom,qssi" revision="bka" remote="infinity" />
+  <project path="device/qcom/sepolicy_vndr/legacy-um" name="device_qcom_sepolicy_vndr" groups="qcom,lahaina" revision="bka-legacy-um" remote="infinity" />
+  <project path="device/qcom/sepolicy_vndr/sm8450" name="device_qcom_sepolicy_vndr" groups="qcom,waipio-vendor" revision="bka-sm8450" remote="infinity" />
+  <project path="device/qcom/sepolicy_vndr/sm8550" name="device_qcom_sepolicy_vndr" groups="qcom,kailua-vendor" revision="bka-sm8550" remote="infinity" />
+  <project path="device/qcom/sepolicy_vndr/sm8650" name="device_qcom_sepolicy_vndr" groups="qcom,lanai-vendor" revision="bka-sm8650" remote="infinity" />
+  <project path="device/qcom/sepolicy_vndr/sm8750" name="device_qcom_sepolicy_vndr" groups="qcom,pakala-vendor" revision="bka-sm8750" remote="infinity" />
+  <project path="hardware/qcom-caf/sm8150/audio" name="hardware_qcom_audio" groups="qcom,msmnile" revision="bka-sm8150" remote="infinity" />
+  <project path="hardware/qcom-caf/sm8150/display" name="hardware_qcom_display" groups="qcom" revision="bka-sm8150" remote="infinity" />
+  <project path="hardware/qcom-caf/sm8350/display" name="hardware_qcom_display" groups="qcom" revision="lineage-22.2-caf-sm8350" remote="infinity" />
+  <project path="hardware/qcom-caf/sm8450/display" name="hardware_qcom_display" groups="qcom" revision="bka-sm8450" remote="infinity" />
+
+  <!-- Sepolicy -->
+  <project path="device/lineage/sepolicy" name="device_infinity_sepolicy" remote="infinity" />
+
+  <project path="device/google/contexthub" name="device_google_contexthub" groups="device,pdk" remote="infinity"/>
+
+  <!-- External -->
+  <project path="external/arm-optimized-routines" name="external_arm-optimized-routines" groups="pdk" remote="infinity" />
+  <project path="external/bouncycastle" name="external_bouncycastle" groups="pdk" remote="infinity" />
+  <project path="external/cronet" name="external_cronet" groups="pdk" remote="infinity" />
+  <project path="external/e2fsprogs" name="external_e2fsprogs" groups="pdk" remote="infinity" />
+  <project path="external/gptfdisk" name="external_gptfdisk" groups="pdk" remote="infinity" />
+  <project path="external/jemalloc_new" name="external_jemalloc_new" groups="pdk" remote="infinity" />
+  <project path="external/lz4" name="external_lz4" groups="pdk" remote="infinity" />
+  <project path="external/piex" name="external_piex" groups="pdk" remote="infinity" />
+  <project path="external/setupcompat" name="external_setupcompat" groups="pdk,sysui-studio" remote="infinity" />
+
+  <!-- Frameworks -->
+  <project path="frameworks/av" name="frameworks_av" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="infinity" />
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="lfs" />
+  <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="infinity" />
+  <project path="frameworks/native" name="frameworks_native" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="infinity" />
+  <project path="frameworks/opt/calendar" name="frameworks_opt_calendar" groups="pdk-cw-fs,pdk-fs" remote="infinity" />
+  <project path="frameworks/opt/colorpicker" name="frameworks_opt_colorpicker" groups="pdk-cw-fs,pdk-fs" remote="infinity" />
+  <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" groups="pdk,sysui-studio" remote="infinity" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="infinity" />
+
+  <!-- Hardware -->
+  <project path="hardware/broadcom/libbt" name="hardware_broadcom_libbt" groups="pdk" remote="infinity" />
+  <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk,sysui-studio" remote="infinity" />
+  <project path="hardware/libhardware" name="hardware_libhardware" groups="pdk" remote="infinity" />
+  <project path="hardware/lineage/compat" name="hardware_lineage_compat" remote="infinity" />
+  <project path="hardware/lineage/interfaces" name="hardware_lineage_interfaces" groups="pdk,sysui-studio" remote="infinity" />
+  <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" groups="qcom_wlan,pdk-qcom" remote="infinity" />
+
+  <!-- Kernel -->
+  <project path="kernel/configs" name="kernel_configs" groups="vts,pdk" remote="infinity" />
+
+  <!-- CORE -->
+  <project path="lineage-sdk" name="custom-sdk" remote="infinity" />
+
+  <project path="art" name="art" remote="infinity" />
+  <project path="bionic" name="bionic" groups="pdk" remote="infinity"/>
+
+  <!-- Packages -->
+  <project path="packages/apps/Contacts" name="packages_apps_Contacts" remote="infinity" groups="pdk-fs" />
+  <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="infinity" />
+  <project path="packages/apps/DocumentsUI" name="packages_apps_DocumentsUI" remote="infinity" groups="pdk-cw-fs,pdk-fs" />
+  <project path="packages/apps/Messaging" name="packages_apps_Messaging" remote="infinity" />
+  <project path="packages/apps/ColumbusService" name="packages_apps_ColumbusService" remote="infinity" />
+  <project path="packages/apps/FaceUnlock" name="packages_apps_FaceUnlock" remote="infinity" />
+  <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" groups="pdk-fs" remote="infinity" />
+  <project path="packages/apps/InfinitySuite" name="packages_apps_InfinitySuite" remote="lfs" />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="lfs" />
+  <project path="packages/apps/LMOFreeform" name="packages_apps_LMOFreeform" remote="infinity" />
+  <project path="packages/apps/LineageParts" name="packages_apps_Parts" remote="infinity" />
+  <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" groups="pdk-fs" remote="infinity" />
+  <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" groups="pdk-fs,sysui-studio" remote="infinity" />
+  <project path="packages/apps/Updater" name="packages_apps_Updater" remote="infinity" />
+  <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" remote="infinity" groups="pdk-fs" />
+  <project path="packages/services/OmniJaws" name="packages_services_OmniJaws" remote="infinity" />
+  <project path="packages/overlays/Themes" name="packages_overlays_Themes" remote="infinity" />
+
+  <!-- prebuilts -->
+  <project path="prebuilts/infinity-sdk" name="prebuilts_infinity-sdk" remote="infinity" />
+
+  <!-- Platform -->
+  <project path="platform_testing" name="platform_testing" groups="pdk-fs,pdk-cw-fs,cts,sysui-studio" remote="infinity" />
+
+  <!-- System -->
+  <project path="system/bpf" name="system_bpf" groups="pdk" remote="infinity" />
+  <project path="system/chre" name="system_chre" groups="pdk" remote="infinity" />
+  <project path="system/core" name="system_core" groups="pdk" remote="infinity" />
+  <project path="system/extras" name="system_extras" groups="pdk" remote="infinity" />
+  <project path="system/libhidl" name="system_libhidl" groups="pdk,sysui-studio" remote="infinity" />
+  <project path="system/libhwbinder" name="system_libhwbinder" groups="pdk" remote="infinity" />
+  <project path="system/logging" name="system_logging" groups="pdk" remote="infinity" />
+  <project path="system/keymaster" name="system_keymaster" groups="pdk" remote="infinity" />
+  <project path="system/memory/lmkd" name="system_memory_lmkd" groups="pdk" remote="infinity" />
+  <project path="system/netd" name="system_netd" groups="pdk" remote="infinity" />
+  <project path="system/security" name="system_security" groups="pdk" remote="infinity" />
+  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="infinity" />
+  <project path="system/tools/mkbootimg" name="system_tools_mkbootimg" groups="pdk" remote="infinity" />
+  <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="infinity" />
+  <project path="system/vold" name="system_vold" groups="pdk" remote="infinity" />
+
+  <!-- Vendor -->
+  <project path="vendor/extras" name="vendor_extras" remote="infinity" />
+  <project path="vendor/support" name="vendor_support" remote="infinity" />
+  <project path="vendor/gms" name="vendor_google_gms" remote="lfs" clone-depth="1" />
+  <project path="vendor/infinity" name="vendor_infinity" remote="infinity" />
+  <project path="vendor/pixel-style" name="vendor_gms_overlays" remote="infinity" />
+
+</manifest>
