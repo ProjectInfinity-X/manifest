@@ -944,7 +944,10 @@
   </project>
   <!-- END open-source projects -->
 
+  <!-- Infinity-X repos -->
   <include name="snippets/infinity.xml" />
+
+  <!-- LineageOS repos -->
   <include name="snippets/lineage.xml" />
 
 </manifest>
