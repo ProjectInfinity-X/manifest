@@ -2,7 +2,7 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".."
+           fetch="https://android.googlesource.com"
            review="https://android-review.googlesource.com/" />
   <default revision="refs/tags/android-15.0.0_r36"
            remote="aosp"
@@ -179,7 +179,6 @@
   <project path="external/ComputeLibrary" name="platform/external/ComputeLibrary" groups="pdk-lassen,pdk-gs-arm" />
   <project path="external/connectedappssdk" name="platform/external/connectedappssdk" groups="pdk" />
   <project path="external/conscrypt" name="platform/external/conscrypt" groups="pdk" />
-  <project path="external/coreboot" name="platform/external/coreboot" groups="pdk"/>
   <project path="external/cpu_features" name="platform/external/cpu_features" groups="pdk" />
   <project path="external/cpuinfo" name="platform/external/cpuinfo" groups="pdk" />
   <project path="external/crcalc" name="platform/external/crcalc" groups="pdk" />
@@ -610,7 +609,7 @@
   <project path="external/universal-tween-engine" name="platform/external/universal-tween-engine" />
   <project path="external/uwb" name="platform/external/uwb" groups="pdk" />
   <project path="external/v4l2_codec2" name="platform/external/v4l2_codec2" groups="pdk" />
-  <project path="external/vboot_reference" name="platform/external/vboot_reference" groups="pdk" />
+  <project path="external/vboot_reference" name="platform/external/vboot_reference" groups="pdk" revision="android15-release" />
   <project path="external/virglrenderer" name="platform/external/virglrenderer" groups="pdk" />
   <project path="external/virtio-media" name="platform/external/virtio-media" groups="pdk" />
   <project path="external/vixl" name="platform/external/vixl" groups="pdk" />
@@ -1063,5 +1062,9 @@
     <copyfile src="lk_inc.mk" dest="lk_inc.mk" />
   </project>
   <!-- END open-source projects -->
+
+  <include name="snippets/remove.xml" />
+  <include name="snippets/infinity.xml" />
+  <include name="snippets/lineage.xml" />
 
 </manifest>
