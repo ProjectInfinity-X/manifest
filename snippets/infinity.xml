@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Project Infinity X -->
+  <remote name="infinity"
+          fetch="https://github.com/ProjectInfinity-X"
+          revision="16" />
+
+  <!-- LFS -->
+  <remote name="lfs"
+          fetch="https://gitea.com/projectInfinity-x"
+          revision="16" />
+
+  <!-- Manifest -->
+  <project path="manifest" name="manifest" remote="infinity" />
+
+  <!-- Build -->
+  <project path="build/make" name="build" groups="pdk,sysui-studio" remote="infinity">
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed,sysui-studio" remote="infinity"></project>
+
+  <!-- Core -->
+  <project path="art" name="art" groups="pdk" remote="infinity" />
+  <project path="bionic" name="bionic" groups="pdk" remote="infinity" />
+  <project path="libcore" name="libcore" groups="pdk" remote="infinity" />
+
+  <!-- Bootable -->
+  <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="infinity" />
+
+  <!-- Device -->
+  <project path="device/lineage/sepolicy" name="device_infinity_sepolicy" remote="infinity" />
+
+  <!-- External -->
+  <project path="external/FadingEdgeLayout" name="external_FadingEdgeLayout" remote="infinity" />
+  <project path="external/bouncycastle" name="external_bouncycastle" groups="pdk" remote="infinity" />
+  <project path="external/jemalloc_new" name="external_jemalloc_new" groups="pdk" remote="infinity" />
+
+  <!-- Frameworks -->
+  <project path="frameworks/av" name="frameworks_av" groups="pdk,sysui-studio" remote="infinity" />
+  <project path="frameworks/base" name="frameworks_base" remote="lfs" />
+  <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="infinity" />
+  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="infinity" />
+  <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" groups="pdk,sysui-studio" remote="infinity" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk,sysui-studio" remote="infinity" />
+
+  <!-- SDK -->
+  <project path="lineage-sdk" name="custom-sdk" remote="infinity" />
+  <project path="infinity-sdk" name="prebuilts_infinity-sdk" remote="infinity" />
+
+  <!-- Packages: Apps -->
+  <project path="packages/apps/AppLocker" name="packages_apps_AppLocker" remote="infinity" />
+  <project path="packages/apps/Contacts" name="packages_apps_Contacts" groups="pdk-fs" remote="infinity" />
+  <project path="packages/apps/ColumbusService" name="packages_apps_ColumbusService" remote="infinity" />
+  <project path="packages/apps/Dialer" name="packages_apps_Dialer" groups="pdk-fs" remote="infinity" />
+  <project path="packages/apps/FaceUnlock" name="packages_apps_FaceUnlock" remote="infinity" />
+  <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="infinity" />
+  <project path="packages/apps/InfinitySuite" name="packages_apps_InfinitySuite" remote="lfs" />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="lfs" />
+  <project path="packages/apps/LineageParts" name="packages_apps_Parts" remote="infinity" />
+  <project path="packages/apps/LMOFreeform" name="packages_apps_LMOFreeform" remote="infinity" />
+  <project path="packages/apps/Messaging" name="packages_apps_Messaging" groups="pdk-fs" remote="infinity" />
+  <project path="packages/apps/OmniStyle" name="packages_apps_OmniStyle" remote="infinity" revision="master" clone-depth="1" />
+  <project path="packages/apps/Sandbox" name="packages_apps_Sandbox" remote="infinity" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="lfs" />
+  <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" groups="pdk-fs" remote="infinity" />
+  <project path="packages/apps/ThemeStore" name="packages_apps_ThemeStore" remote="infinity" />
+  <project path="packages/apps/Updater" name="packages_apps_Updater" remote="infinity" />
+  <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" groups="pdk-fs,sysui-studio" remote="infinity" />
+
+  <!-- Packages: Modules -->
+  <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk" remote="infinity" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="infinity" />
+  <project path="packages/modules/Nfc" name="packages_modules_Nfc" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="infinity" />
+  <project path="packages/modules/StatsD" name="packages_modules_StatsD" remote="infinity" />
+  <project path="packages/modules/Wifi" name="packages_modules_Wifi" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="infinity" />
+
+  <!-- Packages: Overlays -->
+  <project path="packages/overlays/Themes" name="packages_overlays_Themes" remote="infinity" />
+
+  <!-- Packages: Services -->
+  <project path="packages/services/AxQuickLook" name="packages_services_AxQuickLook" remote="infinity" />
+  <project path="packages/services/DeviceAsWebcam" name="packages_services_DeviceAsWebcam" groups="pdk-cw-fs,pdk-fs" remote="infinity" />
+  <project path="packages/services/OmniJaws" name="packages_services_OmniJaws" remote="infinity" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="infinity" />
+
+  <!-- System -->
+  <project path="system/core" name="system_core" groups="pdk" remote="infinity" />
+  <project path="system/libhidl" name="system_libhidl" groups="pdk,sysui-studio" remote="infinity" />
+  <project path="system/vold" name="system_vold" groups="pdk" remote="infinity" />
+  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="infinity" />
+  <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="infinity" />
+  <project path="system/memory/libmeminfo" name="system_memory_libmeminfo" groups="pdk" remote="infinity" />
+
+  <!-- Vendor -->
+  <project path="vendor/extras" name="vendor_extras" remote="infinity" />
+  <project path="vendor/google/gms" name="tejas101k/vendor_google_gms" remote="gitlab" revision="16" clone-depth="1" />
+  <project path="vendor/infinity" name="vendor_infinity" remote="infinity" />
+  <project path="vendor/support" name="vendor_support" remote="infinity" />
+
+</manifest>
